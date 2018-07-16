@@ -5,9 +5,11 @@ defmodule HelloTest do
   test "greets the world" do
     assert Hello.hello() == "Hello world!"
   end
+
   test "greets Mark" do
     assert Hello.hello("Mark") == "Hello, Mark!"
   end
+
   test "greets Mike" do
     assert Hello.hello("Mike") == "Hello, Mike!"
   end
