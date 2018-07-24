@@ -32,4 +32,23 @@ defmodule HelloTest do
     assert Hello.factorial(14) == 87178291200
     assert Hello.factorial(15) == 1307674368000
   end
+
+  test "fibonacci" do
+    assert Hello.fib(0) == 1
+    assert Hello.fib(1) == 1
+    assert Hello.fib(2) == 2
+    assert Hello.fib(3) == 3
+    assert Hello.fib(4) == 5
+    assert Hello.fib(5) == 8
+    assert Hello.fib(6) == 13
+    assert Hello.fib(7) == 21
+    assert Hello.fib(8) == 34
+    assert Hello.fib(9) == 55
+    assert Hello.fib(10) == 89
+    assert Hello.fib(11) == 144
+    assert Hello.fib(12) == 233
+    assert Hello.fib(13) == 377
+    assert Hello.fib(14) == 610
+    assert Hello.fib(15) == 987
+  end
 end
