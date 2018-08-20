@@ -1,15 +1,12 @@
 defmodule RockScissorsPaper.CLI do
-  def main(args \\ []) do
+  def main(_args \\ []) do
     move()
   end
 
   def move() do
     player = get_player_move()
 
-    if !Enum.member?([:Rock, :Paper, :Scisors], player) do
-      IO.puts("You should type either: Rock, Paper or Scissors")
-      move()
-    else
+    if Enum.member?([:Rock, :Paper, :Scisors], player) do
       ai = RockScissorsPaper.ai_make_move()
 
       winner = RockScissorsPaper.get_winner(player, ai)
@@ -18,6 +15,9 @@ defmodule RockScissorsPaper.CLI do
 
       IO.puts("AI's move is: #{ai}")
       IO.puts("Winner is: #{winner}")
+    else
+      IO.puts("You should type either: Rock, Paper or Scissors")
+      move()
     end
   end
 
