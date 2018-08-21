@@ -23,10 +23,10 @@ defmodule RockScissorsPaper do
     :you
   end
   def get_winner(:Rock, :Scisors) do
-    :player
+    :you
   end
   def get_winner(:Scisors, :Paper) do
-    :player
+    :you
   end
   def get_winner(_player, _ai) do
     :ai
