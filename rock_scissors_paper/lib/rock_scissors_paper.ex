@@ -4,18 +4,14 @@ defmodule RockScissorsPaper do
   """
 
   @doc """
-  Hello world.
+  RockScissorsPaper class.
 
   ## Examples
 
-      iex> RockScissorsPaper.hello
-      :world
+      iex> RockScissorsPaper.get_winner(:Paper, :Rock)
+      :you
 
   """
-  def hello do
-    :world
-  end
-
   def get_winner(player, ai) when player == ai do
     :tie
   end
