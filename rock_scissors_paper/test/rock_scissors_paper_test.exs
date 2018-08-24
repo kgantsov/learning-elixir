@@ -2,10 +2,6 @@ defmodule RockScissorsPaperTest do
   use ExUnit.Case
   doctest RockScissorsPaper
 
-  test "greets the world" do
-    assert RockScissorsPaper.hello() == :world
-  end
-
   test "get winner" do
     assert RockScissorsPaper.get_winner(:Paper, :Rock) == :you
     assert RockScissorsPaper.get_winner(:Rock, :Scisors) == :you

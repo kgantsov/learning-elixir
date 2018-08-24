@@ -31,5 +31,4 @@ defmodule RockScissorsPaper do
   def ai_make_move do
     Enum.random([:Rock, :Paper, :Scisors])
   end
-
 end
