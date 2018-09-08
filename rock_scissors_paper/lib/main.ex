@@ -14,7 +14,11 @@ defmodule RockScissorsPaper.CLI do
       |> String.capitalize()
 
       IO.puts("AI's move is: #{ai}")
-      IO.puts("Winner is: #{winner}")
+
+      case winner do
+        "Tie" -> IO.puts("Tie")
+        _ -> IO.puts("Winner is: #{winner}")
+      end
     else
       IO.puts("You should type either: Rock, Paper or Scissors")
       move()
