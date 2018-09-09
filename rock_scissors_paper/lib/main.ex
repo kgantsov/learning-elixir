@@ -10,14 +10,13 @@ defmodule RockScissorsPaper.CLI do
       ai = RockScissorsPaper.ai_make_move()
 
       winner = RockScissorsPaper.get_winner(player, ai)
-      |> Atom.to_string()
-      |> String.capitalize()
 
       IO.puts("AI's move is: #{ai}")
 
       case winner do
-        "Tie" -> IO.puts("Tie")
-        _ -> IO.puts("Winner is: #{winner}")
+        :tie -> IO.puts("Tie")
+        :ai -> IO.puts("Sorry! Computer WON!")
+        :you -> IO.puts("Congratulations! You won this game!")
       end
     else
       IO.puts("You should type either: Rock, Paper or Scissors")
